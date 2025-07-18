@@ -1,18 +1,18 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!DOCTYPE html><html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio - Salma Sabir</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salma Sabir - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script defer src="main.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
   <header>
     <nav class="navbar">
       <div class="logo">SALMA</div>
       <ul class="nav-links">
-        <li><a href="#home" data-i18n="navHome">Accueil</a></li>
+        <li><a href="#home" class="active" data-i18n="navHome">Accueil</a></li>
         <li><a href="#about" data-i18n="navAbout">À propos</a></li>
         <li><a href="#skills" data-i18n="navSkills">Compétences</a></li>
         <li><a href="#parcours" data-i18n="navPath">Parcours</a></li>
@@ -20,90 +20,89 @@
         <li><a href="#projects" data-i18n="navProjects">Projets</a></li>
         <li><a href="#dashboard" data-i18n="navDashboard">Admin</a></li>
         <li><a href="#contact" data-i18n="navContact">Contact</a></li>
-        <li><button class="lang-btn" onclick="switchLang()">🌐 EN | FR</button></li>
       </ul>
+      <div class="controls">
+        <select id="langSwitcher">
+          <option value="fr">FR</option>
+          <option value="en">EN</option>
+        </select>
+        <button id="themeToggle">🌙</button>
+      </div>
     </nav>
-  </header>
-
-  <main>
-    <section id="home" class="hero" style="background-image: url('assets/bg.jpg')">
-      <img src="assets/profile.jpg" alt="Salma" class="profile-img" />
+  </header>  <main>
+    <section id="home" class="hero">
+      <img src="assets/profile.jpg" alt="Photo de profil" class="profile-img" />
       <h1>Salma Sabir</h1>
       <p data-i18n="heroDesc">Développeuse Web Full Stack</p>
-    </section>
+    </section><section id="about">
+  <h2 data-i18n="aboutTitle">À propos de moi</h2>
+  <p data-i18n="aboutText">Jeune lauréate motivée, titulaire d’un diplôme Bac+3 en Sciences Mathématiques, Informatiques et Applications...</p>
+</section>
 
-    <section id="about">
-      <h2 data-i18n="aboutTitle">À propos de moi</h2>
-      <p data-i18n="aboutText">Jeune lauréate motivée, titulaire d’un diplôme Bac+3 en Sciences Mathématiques, Informatiques et Applications. Je dispose d’une solide formation en développement web et en gestion de bases de données.</p>
-    </section>
+<section id="skills">
+  <h2 data-i18n="skillsTitle">Compétences</h2>
+  <div class="skills-grid">
+    <div class="skill"><i class="fab fa-html5"></i> HTML5</div>
+    <div class="skill"><i class="fab fa-css3-alt"></i> CSS3</div>
+    <div class="skill"><i class="fab fa-js"></i> JavaScript</div>
+    <div class="skill"><i class="fab fa-python"></i> Python</div>
+    <div class="skill"><i class="fab fa-react"></i> React</div>
+    <div class="skill"><i class="fas fa-database"></i> MongoDB</div>
+    <div class="skill"><i class="fab fa-git-alt"></i> Git/GitHub</div>
+    <div class="skill"><i class="fas fa-code"></i> C/C++</div>
+    <div class="skill"><i class="fas fa-file-word"></i> Word</div>
+    <div class="skill"><i class="fas fa-file-excel"></i> Excel</div>
+    <div class="skill"><i class="fas fa-file-powerpoint"></i> PowerPoint</div>
+  </div>
+</section>
 
-    <section id="skills">
-      <h2 data-i18n="skillsTitle">Compétences</h2>
-      <div class="skills-grid">
-        <div class="skill"><i class="fab fa-html5"></i> HTML5</div>
-        <div class="skill"><i class="fab fa-css3-alt"></i> CSS3</div>
-        <div class="skill"><i class="fab fa-js-square"></i> JavaScript</div>
-        <div class="skill"><i class="fab fa-python"></i> Python</div>
-        <div class="skill"><i class="fab fa-react"></i> React</div>
-        <div class="skill"><i class="fas fa-database"></i> MongoDB</div>
-        <div class="skill"><i class="fab fa-git-alt"></i> Git/GitHub</div>
-        <div class="skill"><i class="fas fa-code"></i> C/C++</div>
-        <div class="skill"><i class="fas fa-file-word"></i> Word</div>
-        <div class="skill"><i class="fas fa-file-excel"></i> Excel</div>
-        <div class="skill"><i class="fas fa-file-powerpoint"></i> PowerPoint</div>
-      </div>
-    </section>
+<section id="parcours">
+  <h2 data-i18n="pathTitle">Parcours</h2>
+  <p>Voici un aperçu de mes études et formations passées.</p>
+  <div class="cards">
+    <div class="card" data-i18n="path1">Formation: développement & solutions (2025) - web4jobs</div>
+    <div class="card" data-i18n="path2">Licence: Sciences mathématiques, informatiques et applications (2021-2024) - Faculté polydisciplinaire Ouarzazate</div>
+    <div class="card" data-i18n="path3">Baccalauréat: Sciences physiques (2020-2021) - Lycée Mohamed VI, Alnif</div>
+  </div>
+</section>
 
-    <section id="parcours">
-      <h2 data-i18n="pathTitle">Parcours</h2>
-      <div class="card" data-i18n="path1"></div>
-      <div class="card" data-i18n="path2"></div>
-      <div class="card" data-i18n="path3"></div>
-    </section>
+<section id="cv">
+  <h2 data-i18n="cvTitle">Mon CV</h2>
+  <img src="assets/cv.jpg" alt="Mon CV" class="cv-img" />
+</section>
 
-    <section id="cv">
-      <h2 data-i18n="cvTitle">Mon CV</h2>
-      <div class="card">
-        <img src="assets/cv.jpg" alt="CV de Salma" class="cv-img" />
-      </div>
-    </section>
+<section id="projects">
+  <h2 data-i18n="projectTitle">Projets</h2>
+  <div class="cards">
+    <div class="card"><img src="assets/project1.jpg" alt="Projet 1" /><p>Site de recettes</p></div>
+    <div class="card"><img src="assets/project2.jpg" alt="Projet 2" /><p>Portfolio Design</p></div>
+  </div>
+</section>
 
-    <section id="projects">
-      <h2 data-i18n="projectTitle">Projets</h2>
-      <div id="project-list" class="projects-grid">
-        <!-- Projets ajoutés par Dashboard JS -->
-      </div>
-    </section>
+<section id="dashboard">
+  <h2 data-i18n="dashboardTitle">Espace Admin</h2>
+  <button data-i18n="addBtn">Ajouter</button>
+</section>
 
-    <section id="dashboard">
-      <h2 data-i18n="dashboardTitle">Espace Admin</h2>
-      <input type="text" id="proj-title" placeholder="Titre du projet" />
-      <input type="text" id="proj-desc" placeholder="Description" />
-      <input type="text" id="proj-img" placeholder="Lien image (ex: assets/project1.jpg)" />
-      <button onclick="addProject()" data-i18n="addBtn">Ajouter</button>
-    </section>
+<section id="contact">
+  <h2 data-i18n="contactTitle">Contact</h2>
+  <p>Je suis toujours ouvert aux nouvelles opportunités. N'hésitez pas à me contacter.</p>
+  <form>
+    <input type="text" placeholder="Nom" required />
+    <input type="email" placeholder="Email" required />
+    <textarea placeholder="Message" required></textarea>
+    <button type="submit">Envoyer</button>
+  </form>
+  <p data-i18n="socialText">Vous pouvez également me trouver sur :</p>
+  <div class="social-icons">
+    <a href="https://github.com/username"><i class="fab fa-github"></i></a>
+    <a href="https://linkedin.com/in/username"><i class="fab fa-linkedin"></i></a>
+    <a href="https://discordapp.com/users/username"><i class="fab fa-discord"></i></a>
+  </div>
+</section>
 
-    <section id="contact">
-      <h2 data-i18n="contactTitle">Contact</h2>
-      <form>
-        <input type="text" placeholder="Nom" />
-        <input type="email" placeholder="Email" />
-        <textarea placeholder="Message"></textarea>
-        <button>Envoyer</button>
-      </form>
-      <p data-i18n="socialText">Vous pouvez également me trouver sur :</p>
-      <div class="social-icons">
-        <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://discordapp.com/users/yourprofile" target="_blank"><i class="fab fa-discord"></i></a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
+  </main>  <footer>
     <p>&copy; 2025 SABIR SALMA - Tous Droits Réservés.</p>
   </footer>
-
-  <script src="main.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@
   --white: #F1F7F7;
   --mint: #B0D9D0;
   --dark-green: #5D6B6B;
-  --dark-mode-bg: #222;
+  --dark-mode-bg: #1e1e1e;
   --text-dark: #222;
   --text-light: #f1f1f1;
 }
@@ -37,6 +37,7 @@ body.dark-mode {
   display: flex;
   gap: 1rem;
   list-style: none;
+  padding-left: 0;
 }
 
 .navbar .nav-links a {
@@ -66,10 +67,15 @@ body.dark-mode {
   align-items: center;
 }
 
+/* Hero section */
 .hero {
   text-align: center;
-  padding: 4rem 1rem;
-  background: var(--light-gray);
+  padding: 5rem 1rem 4rem;
+  background-image: url("assets/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--text-dark);
   transition: background 0.3s;
 }
 
@@ -78,12 +84,18 @@ body.dark-mode {
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
+  border: 3px solid white;
+  margin-bottom: 1rem;
 }
 
 section {
   padding: 3rem 1rem;
   max-width: 1000px;
   margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
 }
 
 .skills-grid {
@@ -107,7 +119,6 @@ section {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-  transition: background 0.3s, color 0.3s;
 }
 
 .card {
@@ -123,6 +134,7 @@ section {
 .card img {
   width: 100%;
   border-radius: 8px;
+  margin-bottom: 0.5rem;
 }
 
 .cv-img {
@@ -202,7 +214,7 @@ body.dark-mode .navbar .nav-links a:hover {
 }
 
 body.dark-mode .hero {
-  background: #444;
+  color: var(--text-light);
 }
 
 body.dark-mode .skill,
@@ -235,6 +247,7 @@ body.dark-mode footer {
 @media screen and (max-width: 768px) {
   .navbar .nav-links {
     flex-direction: column;
+    align-items: center;
   }
 
   .skills-grid {

@@ -1,33 +1,13 @@
-const translations = {
-  fr: {
-    navHome: "Accueil",
-    navAbout: "À propos",
-    navSkills: "Compétences",
-    navPath: "Parcours",
-    navCV: "CV",
-    navProjects: "Projets",
-    navDashboard: "Admin",
-    navContact: "Contact",
-    heroDesc: "Développeuse Web Full Stack",
-    aboutTitle: "À propos de moi",
-    aboutText: "Jeune lauréate motivée, titulaire d’un diplôme Bac+3 en Sciences Mathématiques, Informatiques et Applications. Je dispose d’une solide formation en développement web et en gestion de bases de données.",
-    skillsTitle: "Compétences",
-    pathTitle: "Parcours",
-    path1: "Formation: développement & solutions (2025) - web4jobs",
-    path2: "Licence: Sciences mathématiques, informatiques et applications (2021-2024) - Faculté polydisciplinaire Ouarzazate",
-    path3: "Baccalauréat: Sciences physiques (2020-2021) - Lycée Mohamed VI, Alnif",
-    cvTitle: "Mon CV",
-    projectTitle: "Projets",
-    dashboardTitle: "Espace Admin",
-    addBtn: "Ajouter",
-    contactTitle: "Contact",
-    socialText: "Vous pouvez également me trouver sur :"
-  },
-  en: {
-    navHome: "Home",
-    navAbout: "About",
-    navSkills: "Skills",
-    navPath: "Path",
-    navCV: "CV",
-    navProjects: "Projects",
-    navDashboard: "
+// Toggle Dark Mode const darkToggle = document.getElementById('darkToggle'); darkToggle.addEventListener('click', () => { document.body.classList.toggle('dark-mode'); });
+
+// Language Switch const langSwitch = document.getElementById('langSwitch'); let currentLang = 'fr';
+
+const translations = { fr: { navHome: "Accueil", navAbout: "À propos", navSkills: "Compétences", navPath: "Parcours", navCV: "CV", navProjects: "Projets", navDashboard: "Admin", navContact: "Contact", heroDesc: "Développeuse Web Full Stack", aboutTitle: "À propos de moi", aboutText: "Jeune lauréate motivée, titulaire d’un diplôme Bac+3 en Sciences Mathématiques, Informatiques et Applications. Je dispose d’une solide formation en développement web et en gestion de bases de données.", skillsTitle: "Compétences", pathTitle: "Parcours", path1: "Formation: développement & solutions (2025) - web4jobs", path2: "Licence: Sciences mathématiques, informatiques et applications (2021-2024) - Faculté polydisciplinaire Ouarzazate", path3: "Baccalauréat: Sciences physiques (2020-2021) - Lycée Mohamed VI, Alnif", cvTitle: "Mon CV", projectTitle: "Projets", dashboardTitle: "Espace Admin", addBtn: "Ajouter", contactTitle: "Contact", socialText: "Vous pouvez également me trouver sur :" }, en: { navHome: "Home", navAbout: "About", navSkills: "Skills", navPath: "Path", navCV: "CV", navProjects: "Projects", navDashboard: "Admin", navContact: "Contact", heroDesc: "Full Stack Web Developer", aboutTitle: "About Me", aboutText: "Motivated young graduate with a Bachelor's degree in Mathematical Sciences, Computer Science and Applications. I have a solid background in web development and database management.", skillsTitle: "Skills", pathTitle: "Path", path1: "Training: development & solutions (2025) - web4jobs", path2: "License: Math, CS & Applications (2021-2024) - Polydisciplinary Faculty Ouarzazate", path3: "Baccalaureate: Physical sciences (2020-2021) - Mohamed VI High School, Alnif", cvTitle: "My CV", projectTitle: "Projects", dashboardTitle: "Admin Space", addBtn: "Add", contactTitle: "Contact", socialText: "You can also find me on:" } };
+
+langSwitch.addEventListener('click', () => { currentLang = currentLang === 'fr' ? 'en' : 'fr'; applyTranslations(); langSwitch.textContent = currentLang.toUpperCase(); });
+
+function applyTranslations() { const t = translations[currentLang]; document.getElementById('navHome').textContent = t.navHome; document.getElementById('navAbout').textContent = t.navAbout; document.getElementById('navSkills').textContent = t.navSkills; document.getElementById('navPath').textContent = t.navPath; document.getElementById('navCV').textContent = t.navCV; document.getElementById('navProjects').textContent = t.navProjects; document.getElementById('navDashboard').textContent = t.navDashboard; document.getElementById('navContact').textContent = t.navContact;
+
+document.getElementById('heroDesc').textContent = t.heroDesc; document.getElementById('aboutTitle').textContent = t.aboutTitle; document.getElementById('aboutText').textContent = t.aboutText; document.getElementById('skillsTitle').textContent = t.skillsTitle; document.getElementById('pathTitle').textContent = t.pathTitle; document.getElementById('path1').textContent = t.path1; document.getElementById('path2').textContent = t.path2; document.getElementById('path3').textContent = t.path3; document.getElementById('cvTitle').textContent = t.cvTitle; document.getElementById('projectTitle').textContent = t.projectTitle; document.getElementById('dashboardTitle').textContent = t.dashboardTitle; document.getElementById('addBtn').textContent = t.addBtn; document.getElementById('contactTitle').textContent = t.contactTitle; document.getElementById('socialText').textContent = t.socialText; }
+
+// Apply default language on load document.addEventListener('DOMContentLoaded', applyTranslations);

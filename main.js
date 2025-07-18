@@ -1,0 +1,33 @@
+const translations = {
+  fr: {
+    navHome: "Accueil",
+    navAbout: "À propos",
+    navSkills: "Compétences",
+    navPath: "Parcours",
+    navCV: "CV",
+    navProjects: "Projets",
+    navDashboard: "Admin",
+    navContact: "Contact",
+    heroDesc: "Développeuse Web Full Stack",
+    aboutTitle: "À propos de moi",
+    aboutText: "Jeune lauréate motivée, titulaire d’un diplôme Bac+3 en Sciences Mathématiques, Informatiques et Applications. Je dispose d’une solide formation en développement web et en gestion de bases de données.",
+    skillsTitle: "Compétences",
+    pathTitle: "Parcours",
+    path1: "Formation: développement & solutions (2025) - web4jobs",
+    path2: "Licence: Sciences mathématiques, informatiques et applications (2021-2024) - Faculté polydisciplinaire Ouarzazate",
+    path3: "Baccalauréat: Sciences physiques (2020-2021) - Lycée Mohamed VI, Alnif",
+    cvTitle: "Mon CV",
+    projectTitle: "Projets",
+    dashboardTitle: "Espace Admin",
+    addBtn: "Ajouter",
+    contactTitle: "Contact",
+    socialText: "Vous pouvez également me trouver sur :"
+  },
+  en: {
+    navHome: "Home",
+    navAbout: "About",
+    navSkills: "Skills",
+    navPath: "Path",
+    navCV: "CV",
+    navProjects: "Projects",
+    navDashboard: "

@@ -1,0 +1,218 @@
+:root {
+  --rose: #F7CBCA;
+  --light-gray: #D5E5E5;
+  --white: #F1F7F7;
+  --mint: #B0D9D0;
+  --dark-green: #5D6B6B;
+  --dark-mode-bg: #222;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--dark-green);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode {
+  background-color: var(--dark-mode-bg);
+  color: var(--white);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--mint);
+  padding: 1rem 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--dark-green);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.nav-links li a,
+.nav-links li button {
+  color: var(--dark-green);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li button:hover {
+  background-color: var(--rose);
+  color: var(--dark-green);
+}
+
+.lang-btn {
+  font-size: 1rem;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: var(--dark-green);
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--rose);
+  margin-bottom: 1rem;
+}
+
+/* Sections */
+section {
+  padding: 2rem 1.5rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: var(--dark-green);
+}
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.skill {
+  background-color: var(--mint);
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  color: var(--dark-green);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.skill i {
+  font-size: 1.3rem;
+  color: var(--rose);
+}
+
+.skill:hover {
+  background-color: var(--rose);
+  cursor: default;
+  color: var(--dark-green);
+}
+
+/* Parcours Cards */
+.card {
+  background: var(--mint);
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+  color: var(--dark-green);
+  transition: background-color 0.3s ease;
+}
+
+.card:hover {
+  background: var(--rose);
+  color: var(--dark-green);
+}
+
+/* CV */
+.cv-img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 8px rgb(0 0 0 / 0.15);
+  margin-top: 1rem;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+/* Contact */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin-bottom: 1rem;
+}
+
+form input, form textarea {
+  padding: 0.8rem;
+  margin-bottom: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid var(--light-gray);
+  font-size: 1rem;
+  resize: vertical;
+}
+
+form button {
+  padding: 0.8rem;
+  border: none;
+  background-color: var(--mint);
+  color: var(--dark-green);
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: var(--rose);
+  color: var(--dark-green);
+}
+
+/* Social icons */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.6rem;
+  color: var(--dark-green);
+}
+
+.social-icons a:hover {
+  color: var(--rose);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-wrap: wrap;
+  }
+}

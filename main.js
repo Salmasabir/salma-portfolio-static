@@ -1,8 +1,5 @@
 // main.js
 
-document.addEventListener("DOMContentLoaded", () => {
-  const darkToggle = document.getElementById("darkModeToggle");
-  const languageSelector = document.getElementById("languageSelector");
 
   // 🌓 Dark Mode
   const enableDarkMode = () => {
@@ -35,9 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
       navContact: "Contact",
       heroDesc: "Full Stack Web Developer",
       aboutTitle: "About Me",
-      aboutText: "Motivated recent graduate with a Bachelor's degree (Bac+3) in Mathematical Sciences, Computer Science, and Applications. I have a strong background in web development and database management.",
+      aboutText: "Motivated recent graduate with a Bachelor's degree (Bac+3) in Mathematical Sciences, Computer Science, and Applications. I have a strong background in web development and database management",
       skillsTitle: "Skills",
       pathTitle: "Path",
+      pathText: "Here is an overview of my past studies and training.",
       path1: "Training: Web Development & Solutions (2025) - web4jobs",
       path2: "Bachelor: Mathematical Sciences and Applications (2021-2024) - FPO Ouarzazate",
       path3: "Baccalaureate: Physical Sciences (2020-2021) - Lycée Mohamed VI, Alnif",
@@ -58,9 +56,10 @@ document.addEventListener("DOMContentLoaded", () => {
       navContact: "Contact",
       heroDesc: "Développeuse Web Full Stack",
       aboutTitle: "À propos de moi",
-      aboutText: "Jeune lauréate motivée, titulaire d’un diplôme Bac+3 en Sciences Mathématiques, Informatiques et Applications. Je dispose d’une solide formation en développement web et en gestion de bases de données.",
+      aboutText: " Jeune lauréate motivée, titulaire d’un diplôme Bac+3 en Sciences Mathématiques, Informatiques et Applications. Je dispose d’une solide formation en développement web et en gestion de bases de données.",
       skillsTitle: "Compétences",
       pathTitle: "Parcours",
+      pathText: "Voici un aperçu de mes études et formations passées",
       path1: "Formation: développement & solutions (2025) - web4jobs",
       path2: "Licence: Sciences mathématiques, informatiques et applications (2021-2024) - FPO Ouarzazate",
       path3: "Baccalauréat: Sciences physiques (2020-2021) - Lycée Mohamed VI, Alnif",
@@ -75,20 +74,31 @@ document.addEventListener("DOMContentLoaded", () => {
   function translate(lang) {
     document.querySelectorAll("[data-i18n]").forEach(el => {
       const key = el.getAttribute("data-i18n");
-      if (translations[lang][key]) {
-        el.textContent = translations[lang][key];
-      }
+      if (translations[lang][key]) el.textContent = translations[lang][key];
     });
   }
 
-  // Initial language
-  const savedLang = localStorage.getItem("lang") || "fr";
-  languageSelector.value = savedLang;
-  translate(savedLang);
+ // Language switch
+const languageSelector = document.getElementById("languageSelector");
 
-  languageSelector.addEventListener("change", () => {
-    const selectedLang = languageSelector.value;
-    localStorage.setItem("lang", selectedLang);
-    translate(selectedLang);
+function updateLanguage(lang) {
+  const elements = document.querySelectorAll("[data-i18n]");
+  elements.forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    el.textContent = translations[lang][key] || key;
   });
+}
+
+languageSelector.addEventListener("change", (e) => {
+  const selectedLang = e.target.value;
+  updateLanguage(selectedLang);
+});
+
+// Par défaut FR
+updateLanguage("fr");
+
+// Dark Mode
+const darkToggle = document.getElementById("darkModeToggle");
+darkToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
 });

@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
       navContact: "Contact",
       heroDesc: "Full Stack Web Developer",
       aboutTitle: "About Me",
-      aboutText: "Motivated graduate with a Bachelor in Mathematical Sciences, IT and Applications...",
+      aboutText: "Motivated recent graduate with a Bachelor's degree (Bac+3) in Mathematical Sciences, Computer Science, and Applications. I have a strong background in web development and database management.",
       skillsTitle: "Skills",
       pathTitle: "Path",
       path1: "Training: Web Development & Solutions (2025) - web4jobs",
@@ -43,9 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
       path3: "Baccalaureate: Physical Sciences (2020-2021) - Lycée Mohamed VI, Alnif",
       cvTitle: "My Resume",
       projectTitle: "Projects",
-      dashboardTitle: "Admin Area",
-      addBtn: "Add",
       contactTitle: "Contact",
+      contactText: "I am always open to new opportunities. Feel free to contact me.",
       socialText: "You can also find me on:"
     },
     fr: {
@@ -59,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
       navContact: "Contact",
       heroDesc: "Développeuse Web Full Stack",
       aboutTitle: "À propos de moi",
-      aboutText: "Jeune lauréate motivée, titulaire d’un diplôme Bac+3 en Sciences Mathématiques, Informatiques et Applications...",
+      aboutText: "Jeune lauréate motivée, titulaire d’un diplôme Bac+3 en Sciences Mathématiques, Informatiques et Applications. Je dispose d’une solide formation en développement web et en gestion de bases de données.",
       skillsTitle: "Compétences",
       pathTitle: "Parcours",
       path1: "Formation: développement & solutions (2025) - web4jobs",
@@ -67,9 +66,8 @@ document.addEventListener("DOMContentLoaded", () => {
       path3: "Baccalauréat: Sciences physiques (2020-2021) - Lycée Mohamed VI, Alnif",
       cvTitle: "Mon CV",
       projectTitle: "Projets",
-      dashboardTitle: "Espace Admin",
-      addBtn: "Ajouter",
       contactTitle: "Contact",
+      contactText: "Je suis toujours ouvert aux nouvelles opportunités. N'hésitez pas à me contacter.",
       socialText: "Vous pouvez également me trouver sur :"
     }
   };
@@ -77,16 +75,17 @@ document.addEventListener("DOMContentLoaded", () => {
   function translate(lang) {
     document.querySelectorAll("[data-i18n]").forEach(el => {
       const key = el.getAttribute("data-i18n");
-      if (translations[lang][key]) el.textContent = translations[lang][key];
+      if (translations[lang][key]) {
+        el.textContent = translations[lang][key];
+      }
     });
   }
 
-  // Load stored lang
+  // Initial language
   const savedLang = localStorage.getItem("lang") || "fr";
   languageSelector.value = savedLang;
   translate(savedLang);
 
-  // Change language
   languageSelector.addEventListener("change", () => {
     const selectedLang = languageSelector.value;
     localStorage.setItem("lang", selectedLang);

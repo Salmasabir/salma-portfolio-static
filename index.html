@@ -22,22 +22,23 @@
         <li><a href="#contact" data-i18n="navContact">Contact</a></li>
       </ul>
       <div class="controls">
-        <select id="langSwitcher">
+        <select id="languageSelector">
           <option value="fr">FR</option>
           <option value="en">EN</option>
         </select>
-        <button id="themeToggle">🌙</button>
+        <button id="darkModeToggle">🌙</button>
       </div>
     </nav>
   </header>  <main>
-    <section id="home" class="hero">
+    <section id="home" class="hero" style="background-image: url('assets/bg.jpg'); background-size: cover; background-position: center;">
       <img src="assets/profile.jpg" alt="Photo de profil" class="profile-img" />
       <h1>Salma Sabir</h1>
       <p data-i18n="heroDesc">Développeuse Web Full Stack</p>
+       <a href="#about" class="btn">Learn More</a>
     </section><section id="about">
   <h2 data-i18n="aboutTitle">À propos de moi</h2>
-  <p data-i18n="aboutText">Jeune lauréate motivée, titulaire d’un diplôme Bac+3 en Sciences Mathématiques, Informatiques et Applications...</p>
-  <a href="#about" class="btn">Learn More</a>
+  <p data-i18n="aboutText"> Jeune lauréate motivée, titulaire d’un diplôme Bac+3 en Sciences Mathématiques, Informatiques et Applications. Je dispose d’une solide formation en développement web et en gestion de bases de données.</p>
+  
 </section>
 
 <section id="skills">
@@ -59,7 +60,7 @@
 
 <section id="parcours">
   <h2 data-i18n="pathTitle">Parcours</h2>
-  <p>Voici un aperçu de mes études et formations passées.</p>
+  <p data-i18n="pathText">Voici un aperçu de mes études et formations passées.</p>
   <div class="cards">
     <div class="card" data-i18n="path1">Formation: développement & solutions (2025) - web4jobs</div>
     <div class="card" data-i18n="path2">Licence: Sciences mathématiques, informatiques et applications (2021-2024) - Faculté polydisciplinaire Ouarzazate</div>
@@ -80,14 +81,10 @@
   </div>
 </section>
 
-<section id="dashboard">
-  <h2 data-i18n="dashboardTitle">Espace Admin</h2>
-  <button data-i18n="addBtn">Ajouter</button>
-</section>
 
 <section id="contact">
   <h2 data-i18n="contactTitle">Contact</h2>
-  <p>Je suis toujours ouvert aux nouvelles opportunités. N'hésitez pas à me contacter.</p>
+  <p data-i18n="contactText">Je suis toujours ouvert aux nouvelles opportunités. N'hésitez pas à me contacter.</p>
   <form>
     <input type="text" placeholder="Nom" required />
     <input type="email" placeholder="Email" required />
@@ -96,9 +93,9 @@
   </form>
   <p data-i18n="socialText">Vous pouvez également me trouver sur :</p>
   <div class="social-icons">
-    <a href="https://github.com/username"><i class="fab fa-github"></i></a>
-    <a href="https://linkedin.com/in/username"><i class="fab fa-linkedin"></i></a>
-    <a href="https://discordapp.com/users/username"><i class="fab fa-discord"></i></a>
+    <a href="https://github.com/salmasabir"><i class="fab fa-github"></i></a>
+    <a href="https://linkedin.com/in/-salma-sabir"><i class="fab fa-linkedin"></i></a>
+    <a href="https://discordapp.com/users/1396102931140313088"><i class="fab fa-discord"></i></a>
   </div>
 </section>
 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard Admin</title>
+  <link rel="stylesheet" href="style/admin.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="admin.html" class="active">Dashboard</a>
+  </nav>
+
+  <main>
+    <h1>Gestion des projets</h1>
+
+    <form id="addForm">
+      <input type="text" id="title" placeholder="Titre du projet" required />
+      <textarea id="description" placeholder="Description" required></textarea>
+      <button type="submit">Ajouter</button>
+    </form>
+
+    <ul id="projects-list"></ul>
+  </main>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

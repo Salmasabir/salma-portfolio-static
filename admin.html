@@ -4,26 +4,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dashboard Admin</title>
-  <link rel="stylesheet" href="style/admin.css" />
+  <link rel="stylesheet" href="admin.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script defer src="dashboard.js"></script>
 </head>
 <body>
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="admin.html" class="active">Dashboard</a>
-  </nav>
+  <div class="dashboard-container">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Admin</h2>
+      <ul>
+        <li onclick="showSection('add-project')"><i class="fas fa-plus-circle"></i> Ajouter Projet</li>
+        <li onclick="showSection('manage-projects')"><i class="fas fa-tasks"></i> Gérer Projets</li>
+        <li onclick="showSection('profile')"><i class="fas fa-user"></i> Mon Profil</li>
+      </ul>
+    </aside>
 
-  <main>
-    <h1>Gestion des projets</h1>
+    <!-- Main content -->
+    <main class="main-content">
+      <section id="add-project" class="content-section active">
+        <h2>Ajouter un Projet</h2>
+        <form id="addForm">
+          <input type="text" id="title" placeholder="Titre du projet" required />
+          <textarea id="description" placeholder="Description du projet" required></textarea>
+          <button type="submit">Ajouter</button>
+        </form>
+      </section>
 
-    <form id="addForm">
-      <input type="text" id="title" placeholder="Titre du projet" required />
-      <textarea id="description" placeholder="Description" required></textarea>
-      <button type="submit">Ajouter</button>
-    </form>
+      <section id="manage-projects" class="content-section">
+        <h2>Liste des Projets</h2>
+        <ul id="projects-list"></ul>
+      </section>
 
-    <ul id="projects-list"></ul>
-  </main>
+      <section id="profile" class="content-section">
+        <h2>Mon Profil</h2>
+        <p>Nom: Salma Sabir</p>
+        <p>Email: salma@example.com</p>
+        <!-- يمكنك لاحقاً ربطها بالـ backend -->
+      </section>
+    </main>
 
-  <script src="dashboard.js"></script>
+  </div>
 </body>
 </html>

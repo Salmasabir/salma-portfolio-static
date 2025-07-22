@@ -1,52 +1,6 @@
-const apiUrl = 'http://localhost:5000/api/projects';
+function showSection(sectionId) {
+  const sections = document.querySelectorAll('.content-section');
+  sections.forEach(section => section.classList.remove('active'));
 
-const form = document.getElementById('addForm');
-const projectsList = document.getElementById('projects-list');
-
-function fetchProjects() {
-  fetch(apiUrl)
-    .then(res => res.json())
-    .then(data => {
-      projectsList.innerHTML = '';
-      data.forEach(project => {
-        const li = document.createElement('li');
-        li.innerHTML = `
-          <strong>${project.title}</strong> - ${project.description}
-          <button onclick="deleteProject('${project._id}')">Supprimer</button>
-        `;
-        projectsList.appendChild(li);
-      });
-    })
-    .catch(err => console.error('Erreur fetch projects:', err));
+  document.getElementById(sectionId).classList.add('active');
 }
-
-function deleteProject(id) {
-  // *** هذا السطر صحيح تمامًا ***
-    fetch(`${apiUrl}/${id}`, { method: 'DELETE' })
-    .then(() => fetchProjects())
-    .catch(err => console.error('Erreur delete project:', err));
-}
-
-form.addEventListener('submit', e => {
-  e.preventDefault();
-  const title = document.getElementById('title').value.trim();
-  const description = document.getElementById('description').value.trim();
-
-  if (!title || !description) {
-    alert('Veuillez remplir tous les champs.');
-    return;
-  }
-
-  fetch(apiUrl, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ title, description })
-  })
-    .then(() => {
-      form.reset();
-      fetchProjects();
-    })
-    .catch(err => console.error('Erreur add project:', err));
-});
-
-fetchProjects();

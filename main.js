@@ -46,7 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
       projectTitle: "Projects",
       contactTitle: "Contact",
       contactText: "I am always open to new opportunities. Feel free to contact me.",
-      socialText: "You can also find me on:"
+      socialText: "You can also find me on:",
+      footerText: "&copy; 2025 SABIR SALMA - All Rights Reserved."
     },
     fr: {
       navHome: "Accueil",
@@ -70,7 +71,8 @@ document.addEventListener("DOMContentLoaded", () => {
       projectTitle: "Projets",
       contactTitle: "Contact",
       contactText: "Je suis toujours ouvert aux nouvelles opportunités. N'hésitez pas à me contacter.",
-      socialText: "Vous pouvez également me trouver sur :"
+      socialText: "Vous pouvez également me trouver sur :",
+      footerText: "&copy; 2025 SABIR SALMA - Tous Droits Réservés."
     }
   };
 

@@ -1,7 +1,7 @@
 // main.js
 
 document.addEventListener("DOMContentLoaded", () => {
-  const darkToggle = document.getElementById("darkModeToggle");
+  const darkModeToggle = document.getElementById("darkModeToggle");
   const languageSelector = document.getElementById("languageSelector");
 
   // 🌓 Dark Mode
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const storedDarkMode = localStorage.getItem("darkMode");
   if (storedDarkMode === "enabled") enableDarkMode();
 
-  darkToggle.addEventListener("click", () => {
+  darkModeToggle.addEventListener("click", () => {
     document.body.classList.contains("dark-mode") ? disableDarkMode() : enableDarkMode();
   });
 
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   function translate(lang) {
-    document.querySelectorAll("[data-i18n]").forEach(el => {
+    document.querySelectorAll("[data-i18n trans]").forEach(el => {
       const key = el.getAttribute("data-i18n");
       if (translations[lang][key]) el.textContent = translations[lang][key];
     });

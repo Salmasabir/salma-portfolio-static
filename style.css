@@ -220,7 +220,7 @@ body.dark-mode .navbar .nav-links a:hover {
 }
 
 body.dark-mode .hero {
-  color: var(--text-light);
+  color: var(--text-dark);
 }
 
 body.dark-mode .skill,

@@ -165,11 +165,11 @@ h2 {
 
 .cardsss {
   width: 300px;       
-  height: 1500px;      
-  background-color: var(--rose-moyen);  
+  height: 800px;      
+  background: var(--rose-moyen);  
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background 0.3s, color 0.3s;
 }
 
 

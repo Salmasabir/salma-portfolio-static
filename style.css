@@ -163,15 +163,6 @@ h2 {
   transition: background 0.3s, color 0.3s;
 }
 
-.cardsss {
-  width: 300px;       
-  height: 800px;      
-  background: var(--rose-moyen);  
-  border-radius: 12px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: background 0.3s, color 0.3s;
-}
-
 
 
 .card img {

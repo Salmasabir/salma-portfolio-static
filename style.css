@@ -137,7 +137,7 @@ h2 {
 }
 
 .card {
-  background: var(--rose);
+  background: var(--rose-moyen);
   padding: 1rem;
   border-radius: 12px;
   width: 250px;

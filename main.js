@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
       navDashboard: "Admin",
       navContact: "Contact",
       heroDesc: "Full Stack Web Developer",
+      heroText: "Learn more",
       aboutTitle: "About Me",
       aboutText: "Motivated recent graduate with a Bachelor's degree (Bac+3) in Mathematical Sciences, Computer Science, and Applications. I have a strong background in web development and database management",
       skillsTitle: "Skills",
@@ -47,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
       contactTitle: "Contact",
       contactText: "I am always open to new opportunities. Feel free to contact me.",
       socialText: "You can also find me on:",
-      footerText: "&copy; 2025 SABIR SALMA - All Rights Reserved."
+      footerText: "© 2025 SABIR SALMA - All Rights Reserved."
     },
     fr: {
       navHome: "Accueil",
@@ -59,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
       navDashboard: "Admin",
       navContact: "Contact",
       heroDesc: "Développeuse Web Full Stack",
+      heroText: "En Savoir plus",
       aboutTitle: "À propos de moi",
       aboutText: " Jeune lauréate motivée, titulaire d’un diplôme Bac+3 en Sciences Mathématiques, Informatiques et Applications. Je dispose d’une solide formation en développement web et en gestion de bases de données.",
       skillsTitle: "Compétences",
@@ -72,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
       contactTitle: "Contact",
       contactText: "Je suis toujours ouvert aux nouvelles opportunités. N'hésitez pas à me contacter.",
       socialText: "Vous pouvez également me trouver sur :",
-      footerText: "&copy; 2025 SABIR SALMA - Tous Droits Réservés."
+      footerText: "© 2025 SABIR SALMA - Tous Droits Réservés."
     }
   };
 
